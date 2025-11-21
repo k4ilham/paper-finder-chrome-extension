@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Paper Finder",
+  "version": "1.0.0",
+  "description": "Cari paper dari Crossref API",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.crossref.org/*"]
+}

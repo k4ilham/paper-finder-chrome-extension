@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper Finder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">
+        <div class="logo">📚</div>
+        <div class="title">Paper Finder</div>
+      </div>
+      <div class="subtitle">Powered by Crossref API</div>
+    </div>
+    <div class="card">
+      <div class="section-title">Pencarian Literatur</div>
+      <div class="form">
+        <label>Query</label>
+        <input id="query" type="text" placeholder="contoh: lung cancer prediction" />
+        <div class="grid">
+          <div>
+            <label>Tahun Min</label>
+            <input id="minYear" type="number" min="1900" placeholder="2020" />
+          </div>
+          <div>
+            <label>Tahun Max</label>
+            <input id="maxYear" type="number" min="1900" placeholder="2025" />
+          </div>
+          <div>
+            <label>Min Sitasi</label>
+            <input id="minCitations" type="number" min="0" value="0" />
+          </div>
+          <div>
+            <label>Maks Hasil</label>
+            <input id="maxResults" type="number" min="1" max="100" value="50" />
+          </div>
+        </div>
+        <button id="searchBtn">Cari</button>
+      </div>
+    </div>
+    <div id="status" class="status"></div>
+    <div class="toolbar">
+      <button id="exportBtn" class="ghost">Export CSV</button>
+    </div>
+    <div id="results" class="results"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+<style>
+</style>
+</html>
